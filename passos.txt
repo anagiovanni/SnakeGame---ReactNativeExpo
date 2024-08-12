@@ -1,0 +1,8 @@
+*Configuração da conta local do GIT:
+git config --global user.name anagiovanni
+git config --global user.email anagiovanni66@gmail.com
+
+*Executar o projeto 
+npx expo start --localhost --android
+npm i
+
