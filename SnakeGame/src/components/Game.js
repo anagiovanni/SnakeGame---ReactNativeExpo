@@ -29,7 +29,7 @@ const Game = () => {
     const [ food, setFood ] = useState(FOOD_START);
     const [ isGameOver, setIsGameOver ] = useState(false);
     const [ isGamePaused, setIsGamePaused ] = useState(false);
-    const [ score, setScore ] = useState(0)
+    const [ score, setScore ] = useState(0);
 
     const insets = useSafeAreaInsets();
     const ROWS = Math.floor(
@@ -167,7 +167,7 @@ const Game = () => {
                 />
                 <Board rows={ROWS} cols={COLS} top={insets.top} />
                 <Snake snake={snake} top={insets.top} />
-                {RandomFood}
+                { RandomFood }
             </SafeAreaView>
         </PanGestureHandler>
     )
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: colors.p6,
         flex: 1
-    }
+    },
 })
 
 export default Game

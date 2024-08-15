@@ -2,7 +2,6 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { colors } from "../styles/theme";
 import { BORDER, BORDER_RADIUS, GAP, HEADER_HEIGHT, PIXEL } from "../consts";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const Board = ({ rows, cols, top }) => {
     const dots = Array(rows * cols).fill(0);
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.p5,
         justifyContent: "center",
         alignItems: "center"
-    }
+    },
 });
 
 export default Board

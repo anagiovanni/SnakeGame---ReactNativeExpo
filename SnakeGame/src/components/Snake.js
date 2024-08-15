@@ -1,5 +1,4 @@
 import { Animated } from "react-native";
-import { Coordinate } from "../types";
 import { colors } from "../styles/theme";
 import {
     BORDER,
@@ -11,27 +10,27 @@ import {
 } from "../consts";
 
 const Snake = ({ snake, top }) => {
-    return(
+    return (
         <>
-        {snake.map((node, index) => {
-            const nodeStyle = {
-                with: PIXEL,
-                height: PIXEL,
-                borderWidth: GAP,
-                borderColor: colors.p6,
-                borderRadius: BORDER_RADIUS,
-                top: node.y * PIXEL + top + HEADER_HEIGHT,
-                left: node.x * PIXEL + BORDER,
-                backgroundColor: index === 0 ? colors.p7 : colors.p2,
-                zIndex: index === 0 ? 99 : 1,
-            };
-            return (
-                <Animated.View
-                style={[{ position: "absolute" }, nodeStyle]}
-                key={index}
-                />
-            );
-        })}
+            {snake.map((node, index) => {
+                const nodeStyle = {
+                    with: PIXEL,
+                    height: PIXEL,
+                    borderWidth: GAP,
+                    borderColor: colors.p6,
+                    borderRadius: BORDER_RADIUS,
+                    top: node.y * PIXEL + top + HEADER_HEIGHT,
+                    left: node.x * PIXEL + BORDER,
+                    backgroundColor: index === 0 ? colors.p7 : colors.p2,
+                    zIndex: index === 0 ? 99 : 1,
+                };
+                return (
+                    <Animated.View
+                        style={[{ position: "absolute" }, nodeStyle]}
+                        key={index}
+                    />
+                );
+            })}
         </>
     )
 }
